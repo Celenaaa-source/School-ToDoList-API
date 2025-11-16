@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDK - Masukkan di sini -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script> <!-- Firestore tidak wajib, tapi kadang berguna -->
+</head>
+<body>
+    <div id="app">
+        <div id="auth-container">
+            <h1>School To-Do List</h1>
+            <p>Login dengan akun Google Anda untuk melanjutkan.</p>
+            <button id="login-button">Login with Google</button>
+        </div>
+
+        <div id="dashboard-container" style="display: none;">
+            <div class="header">
+                <span id="user-greeting">Halo, [Nama Pengguna]!</span>
+                <button id="logout-button">Logout</button>
+            </div>
+            <h1>Daftar Tugas Harian</h1>
+            <div class="day-selector">
+                <button data-day="Senin" class="active">Senin</button>
+                <button data-day="Selasa">Selasa</button>
+                <button data-day="Rabu">Rabu</button>
+                <button data-day="Kamis">Kamis</button>
+                <button data-day="Jumat">Jumat</button>
+            </div>
+            <div id="task-list">
+                <!-- Tugas akan dimuat di sini oleh JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
